@@ -19,7 +19,30 @@ AWT is a set of classes under java.awt package
 | swing has more components | awt has less compoinents than swing |
 
 
+
+## Layout Manager
+- a layout manager is a class that determines how components are aranged in a container/window.
+- setLayout() method is used to set the layout
+- some of the layout managers are FLowLoyout, BorderLayout, FrdLayout etc which are defined inder java.awt
+
+### FlowLayout()
+
+**FLowLayout()**
+- it arrranges componentes left to right and top to bottom in a frame/ window
+
+#### its constructor are
+- 5 px horx and 5px vert gab between components
+- center aligned
+
+**FlowLayout(int how)**
+  - 5px horz and 5px vert ga between components
+  - alignment can be controlled bt passing FlowLayout.LEFT , FLowLayout.RIGHT or FlowLayout.CENTER for "int how"
+
+**FlowLayout(int how, int horz, int vert)**
+- horz and ver gap can be controlled
+- alignment can be controlled
 ```
+
 import javax.swing.*; // for GUI Components
 import java.awt.event.*; // for event handling
 //creating a window
