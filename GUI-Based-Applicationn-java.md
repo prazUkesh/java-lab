@@ -17,3 +17,22 @@ AWT is a set of classes under java.awt package
 | swing componments are light weight compionents | awt copmomponents are heavyy weight components|
 | swing is derived from awt | awt is base for swing |
 | swing has more components | awt has less compoinents than swing |
+
+
+```
+import javax.swing.*; // for GUI Components
+import java.awt.event.*; // for event handling
+//creating a window
+JFrame appWindow = new JFrame("Gui App in java")
+
+
+            
+
+
+        frame.setSize(350,  250); //setting window size
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ecit on closing the app
+        frame.setVisible(true); // visibility
+        frame.setResizable(false); 
+    }
+```
