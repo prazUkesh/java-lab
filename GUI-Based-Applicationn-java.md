@@ -59,3 +59,11 @@ JFrame appWindow = new JFrame("Gui App in java")
         frame.setResizable(false); 
     }
 ```
+## Border Layout
+- it arranges components into 5 regions- north, south, west, est and center
+- if north or south components are missimng, wast west center components are expaneded vertically to fill up the space
+- if east or west components are missing, the space is left blank
+
+its constructor are:
+- BorderLayout()
+- BorderLayout(int horz, int vert)
