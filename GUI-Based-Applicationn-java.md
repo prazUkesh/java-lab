@@ -67,3 +67,13 @@ JFrame appWindow = new JFrame("Gui App in java")
 its constructor are:
 - BorderLayout()
 - BorderLayout(int horz, int vert)
+
+
+## GridLayout
+- it divides the container/frame into a matrix of rows and columns and places the components into the grid formed
+- components are add left to right and top to bottom
+
+size of every components are
+- GridLayout() - creates infinite number of coulmns
+- GridLayout(int ows, int cols) - create specified no of rows and columns
+- GridLayout(int rows, int cols, int horx, int vert) - creates specified no f orows and column with specied horz and vert gap
