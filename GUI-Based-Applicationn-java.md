@@ -134,4 +134,55 @@ public void actionPerformed(ActionEvent e){
 }
 
 ```
+## Q2: add 2 btns, one to set etxt on text fied ither to clear the text
+```
+// create a swing gui with a button, when button is clicked, display "you clicked"
+import javax.swing.*; // for GUI Components
 
+import java.awt.FlowLayout;
+import java.awt.event.*; 
+
+public class Q2 implements ActionListener{
+    JFrame jf;
+    JButton btn1,btn2;
+    JTextField t1;
+
+    Q2(){
+        jf = new JFrame("blablabla");
+        jf.setSize(400,350);
+    
+        btn1 = new JButton("submit");
+        btn1.setBounds(100,160, 50, 40);
+        btn1.addActionListener(this);
+
+        btn2 = new JButton("clear");
+        btn2.setBounds(100,160, 50, 40);
+        btn2.addActionListener(this);
+        t1 = new JTextField(20);
+
+        jf.add(btn1);
+        jf.add(btn2);
+        jf.add(t1);
+    
+        jf.setLayout(new FlowLayout());
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+    }
+public static void main(String[] args) {
+    
+ Q2 frm = new Q2();
+}    
+
+public void actionPerformed(ActionEvent e){
+    // JOptionPane.showMessageDialog(null, "dont CLICK ME");
+    // actionPerformed(e);
+    if(e.getSource()==btn1){
+        t1.setText("you clicked ok");
+    }
+    else if(e.getSource()==btn2){
+        t1.setText(" ");
+    }
+}
+}
+
+```
