@@ -454,3 +454,23 @@ public void actionPerformed(ActionEvent e){
     }
 
 ```
+
+## Handling MouseEvent
+- when user interacts on a UI component using a mouse, MouseEvent occurs
+- MouseListener is udused to handle MouseEvent
+- MouseListner contains 4 abstarct methods
+  - public void mousePressed(MouseEvent e)
+  - public void mouseReleased(MouseEvent e)
+  - public void mouseClicked(MouseEvent e)
+  - public void mouseEntered(MouseEvent e) //hovering
+  - public void mouseExited(MouseEvent e) //un-hover/ de-hover
+ 
+> Note: if we implement MouseListener we must override all 5 abstarct methods
+> If we want to override only the required methods, we should use the adapter class (Mouse Adapter)
+
+## Adapter Class
+- An adapter class is an alternative of listener interface. it provides the default implemantation of all methods to defined inside the listener interface. Hence we can override onlt the required methods.
+- Adapter class is provided for only the required methods
+- Adapter class is provided for only three listeners that contain mre than 1 abstract methods
+
+ 
