@@ -186,3 +186,131 @@ public void actionPerformed(ActionEvent e){
 }
 
 ```
+### change buttons backgorunf color
+```
+// create a swing gui with a button, when button is clicked, display "you clicked"
+import javax.swing.*; // for GUI Components
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.*; 
+
+public class Q1 implements ActionListener{
+    JFrame jf;
+    JButton btn1,btn2, btn3;
+    JTextField t1;
+
+    Q1(){
+        jf = new JFrame("blablabla");
+        jf.setSize(400,350);
+    
+        btn1 = new JButton("red");
+        btn1.setBounds(100,160, 50, 40);
+        btn1.addActionListener(this);
+
+        btn2 = new JButton("blue");
+        btn2.setBounds(100,160, 50, 40);
+        btn2.addActionListener(this);
+
+        btn3 = new JButton("green");
+        btn3.setBounds(100,160, 50, 40);
+        btn3.addActionListener(this);
+        t1 = new JTextField(20);
+
+        jf.add(btn1);
+        jf.add(btn2);
+       // jf.add(t1);
+       jf.add(btn3);
+    
+        jf.setLayout(new FlowLayout());
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+    }
+public static void main(String[] args) {
+    
+ Q1 frm = new Q1();
+}    
+
+public void actionPerformed(ActionEvent e){
+    // JOptionPane.showMessageDialog(null, "dont CLICK ME");
+    // actionPerformed(e);
+    
+    if(e.getSource()==btn1){
+       
+        btn1.setBackground(Color.RED);
+    }
+    else if(e.getSource()==btn2){
+        btn2.setBackground(Color.BLUE);
+
+    }else if(e.getSource()==btn3){
+        btn3.setBackground(Color.GREEN);
+
+    }
+}
+}
+
+```
+### change background color
+```
+// create a swing gui with a button, when button is clicked, display "you clicked"
+import javax.swing.*; // for GUI Components
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.*; 
+
+public class Q1 implements ActionListener{
+    JFrame jf;
+    JButton btn1,btn2, btn3;
+    JTextField t1;
+
+    Q1(){
+        jf = new JFrame("blablabla");
+        jf.setSize(400,350);
+    
+        btn1 = new JButton("red");
+        btn1.setBounds(100,160, 50, 40);
+        btn1.addActionListener(this);
+
+        btn2 = new JButton("blue");
+        btn2.setBounds(100,160, 50, 40);
+        btn2.addActionListener(this);
+
+        btn3 = new JButton("green");
+        btn3.setBounds(100,160, 50, 40);
+        btn3.addActionListener(this);
+        t1 = new JTextField(20);
+
+        jf.add(btn1);
+        jf.add(btn2);
+       // jf.add(t1);
+       jf.add(btn3);
+    
+        jf.setLayout(new FlowLayout());
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+    }
+public static void main(String[] args) {
+    
+ Q1 frm = new Q1();
+}    
+
+public void actionPerformed(ActionEvent e){
+    // JOptionPane.showMessageDialog(null, "dont CLICK ME");
+    // actionPerformed(e);
+    
+    if(e.getSource()==btn1){
+       
+        jf.getContentPane().setBackground(Color.RED);
+    }
+    else if(e.getSource()==btn2){
+        jf.getContentPane().setBackground(Color.BLUE);
+
+    }else if(e.getSource()==btn3){
+        jf.getContentPane().setBackground(Color.GREEN);
+
+    }
+}
+}
+
+```
