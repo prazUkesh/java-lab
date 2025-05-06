@@ -406,6 +406,7 @@ public void actionPerformed(ActionEvent e){
             input1 = new JTextField(20);
             input2 = new JTextField(20);
             result = new JTextField(20);
+            result.setEditable(false);
     
             jf.add(add);
             jf.add(sub);
@@ -448,15 +449,7 @@ public void actionPerformed(ActionEvent e){
     }
 
 
-        // switch (e) {
-        //     case "add":
-                
-        //         break;
         
-        //     default:
-        //         break;
-        // }
-
     }
     }
 
