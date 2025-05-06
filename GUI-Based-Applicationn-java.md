@@ -314,3 +314,150 @@ public void actionPerformed(ActionEvent e){
 }
 
 ```
+
+#### Q4 check if num is odd or even
+
+```
+
+    // create a swing gui with a button, when button is clicked, display "you clicked"
+import javax.swing.*; // for GUI Components
+
+import java.awt.FlowLayout;
+import java.awt.event.*; 
+
+public class Q3 implements ActionListener{
+    JFrame jf;
+    JButton btn1;
+    JTextField t1;
+
+    Q3(){
+        jf = new JFrame("blablabla");
+        jf.setSize(400,350);
+    
+        btn1 = new JButton("submit");
+        btn1.setBounds(100,160, 50, 40);
+        btn1.addActionListener(this);
+
+        t1 = new JTextField(20);
+
+        jf.add(btn1);
+        jf.add(t1);
+    
+        jf.setLayout(new FlowLayout());
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+    }
+public static void main(String[] args) {
+    
+ Q3 frm = new Q3();
+}    
+
+public void actionPerformed(ActionEvent e){
+
+    int a = Integer.parseInt(t1.getText());
+    if(a%2==0){
+        JOptionPane.showMessageDialog(null, "Even");
+    }else{
+        JOptionPane.showMessageDialog(null, "Odd");
+
+    }
+}
+}
+```
+
+### Q5 GUI Calculator
+```
+
+    // create a swing gui with a button, when button is clicked, display "you clicked"
+    import javax.swing.*; // for GUI Components
+
+    import java.awt.FlowLayout;
+    import java.awt.event.*; 
+    
+    public class Q4 implements ActionListener{
+        JFrame jf;
+        JButton add, sub, div, mul, reset;
+        JTextField input1, input2, result;
+    
+        Q4(){
+            jf = new JFrame("blablabla");
+            jf.setSize(400,350);
+        
+            add = new JButton("add");
+            add.setBounds(100,160, 50, 40);
+            add.addActionListener(this);
+
+            sub = new JButton("subtract");
+            sub.setBounds(100,160, 50, 40);
+            sub.addActionListener(this);
+
+            div = new JButton("divide");
+            div.setBounds(100,160, 50, 40);
+            div.addActionListener(this);
+
+            mul = new JButton("multiply");
+            mul.setBounds(100,160, 50, 40);
+            mul.addActionListener(this);
+
+            reset = new JButton("reset");
+            reset.setBounds(100,160, 50, 40);
+            reset.addActionListener(this);
+    
+            input1 = new JTextField(20);
+            input2 = new JTextField(20);
+            result = new JTextField(20);
+    
+            jf.add(add);
+            jf.add(sub);
+            jf.add(div);
+            jf.add(mul);
+            // jf.add(reset);
+            jf.add(input1);
+            jf.add(input2);
+            jf.add(result);
+        
+            jf.setLayout(new FlowLayout());
+            jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jf.setVisible(true);
+        }
+    public static void main(String[] args) {
+        
+     Q4 frm = new Q4();
+    }    
+    
+    public void actionPerformed(ActionEvent e){
+    int a = Integer.parseInt(input1.getText());
+    int b = Integer.parseInt(input2.getText());
+    if(e.getSource()==add){
+        int c=a+b;
+        result.setText(c+" ");
+    }else if(e.getSource()==sub){
+        int c=a-b;
+        result.setText(c+" ");
+    }else if(e.getSource()==mul){
+        int c=a*b;
+        result.setText(c+" ");
+    }else if(e.getSource()==div){
+        int c=a/b;
+        result.setText(c+" ");
+    }else if(e.getSource()==reset){
+        input1.setText(" ");
+        input1.setText(" ");
+
+        result.setText(" ");
+    }
+
+
+        // switch (e) {
+        //     case "add":
+                
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+
+    }
+    }
+
+```
