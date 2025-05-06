@@ -96,3 +96,42 @@ size of every components are
 - A listener is an obect that is notified when an event occurs aadter egetting notified, it does the futrther processing. eg. ActionListener, ItemListeeer , KeyListener.
 
   > Note: Every event source must be registered to the event listener,
+
+## Q1: event handling
+```
+// create a swing gui with a button, when button is clicked, display "you clicked"
+import javax.swing.*; // for GUI Components
+
+import java.awt.FlowLayout;
+import java.awt.event.*; 
+
+public class EventHandling implements ActionListener{
+    JFrame jf;
+    JButton button1;
+    EventHandling(){
+        jf = new JFrame("blablabla");
+        jf.setSize(400,350);
+    
+        button1 = new JButton("dont click me");
+        button1.setBounds(100,160, 50, 40);
+    
+        button1.addActionListener(this);
+    
+        jf.setLayout(new FlowLayout());
+        jf.add(button1);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setVisible(true);
+    }
+public static void main(String[] args) {
+    
+ EventHandling frm = new EventHandling();
+}    
+
+public void actionPerformed(ActionEvent e){
+    JOptionPane.showMessageDialog(null, "dont CLICK ME");
+    actionPerformed(e);
+}
+}
+
+```
+
