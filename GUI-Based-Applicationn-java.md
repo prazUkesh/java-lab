@@ -77,3 +77,22 @@ size of every components are
 - GridLayout() - creates infinite number of coulmns
 - GridLayout(int ows, int cols) - create specified no of rows and columns
 - GridLayout(int rows, int cols, int horx, int vert) - creates specified no f orows and column with specied horz and vert gap
+
+
+## Event handling 
+- it is a process of doing something when user ineracts with the ui components
+
+  
+### Event delegation Model
+- an approach to handle events in java . it is based on those concepts -Event source, event and event listener
+
+#### Event source
+- is an object that generates an event, button is event source if it is clicked
+
+#### Event
+- An event is an object that describes a state change in a source, eg. ActionEvent, ItemEvent, KeyEvent etc
+
+#### Event Listener
+- A listener is an obect that is notified when an event occurs aadter egetting notified, it does the futrther processing. eg. ActionListener, ItemListeeer , KeyListener.
+
+  > Note: Every event source must be registered to the event listener,
