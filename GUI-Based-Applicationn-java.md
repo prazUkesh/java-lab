@@ -473,4 +473,61 @@ public void actionPerformed(ActionEvent e){
 - Adapter class is provided for only the required methods
 - Adapter class is provided for only three listeners that contain mre than 1 abstract methods
 
- 
+
+
+ ## add on pressing he add button and subtract on releasing the button
+```
+
+    // create a swing gui with a button, when button is clicked, display "you clicked"
+    import javax.swing.*; // for GUI Components
+
+    import java.awt.FlowLayout;
+    import java.awt.event.*; 
+    
+    public class Mouselst extends MouseAdapter{
+        JFrame jf;
+        JButton add, sub, div, mul, reset;
+        JTextField input1, input2, result;
+    
+        Mouselst(){
+            jf = new JFrame("blablabla");
+            jf.setSize(400,350);
+        
+            add = new JButton("add/sub");
+            add.setBounds(100,160, 50, 40);
+            add.addMouseListener(this);
+    
+            input1 = new JTextField(20);
+            input2 = new JTextField(20);
+            result = new JTextField(20);
+            result.setEditable(false);
+    
+            jf.add(add);
+            jf.add(input1);
+            jf.add(input2);
+            jf.add(result);
+
+        
+            jf.setLayout(new FlowLayout());
+            jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            jf.setVisible(true);
+        }
+    public static void main(String[] args) {
+        
+     Mouselst frm = new Mouselst();
+    }    
+    
+    public void mousePressed(MouseEvent e){
+        int a = Integer.parseInt(input1.getText());
+        int b = Integer.parseInt(input2.getText());
+        int c =a+b;
+        result.setText(c+" ");
+    }
+    public void mouseReleased(MouseEvent e){
+        int a = Integer.parseInt(input1.getText());
+        int b = Integer.parseInt(input2.getText());
+        int c=a-b;
+        result.setText(c+" ");
+    }
+    }
+```
