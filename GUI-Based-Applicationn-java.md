@@ -566,6 +566,9 @@ In order to know whether a radio button or checkbox is sleected or not, we suse 
 | getSelectedItem() , getSelectedIndex() returns selected items/ index | getSelectedValue(), getSelectedValueList(), getSelectedIndices() returns selected value/list/index |
 
 
+JFrame
+used to create a frame/window that contains title bar and 3 control buttons (close, maximmize and minimize). It is the main component because all other components are added inside it. The default layout of JFrame is BorderLayout
+
 
 
 
