@@ -531,3 +531,44 @@ public void actionPerformed(ActionEvent e){
     }
     }
 ```
+## Exploring Swing components
+---
+JCheckBox 
+- it is used to create a checkbox , multiple selections can be done.
+```
+eg. JCheckBox c1,c2;
+c1=  new JCheckBox("Music");
+c1=  new JCheckBox("Dance");
+```
+
+JRadioButton
+- it is used to create a radio button, only one item from group can be selected ,bubttn group calss is used for grouping the radio buttons.
+
+```
+JRadioButton r1,r2;
+r1  =new JRadioButton("Male");
+r2  =new JRadioButton("Female");
+ButtonGroup bg = new ButtonGroup();
+bg.add(r1);
+bg.add(r1);
+
+```
+In order to know whether a radio button or checkbox is sleected or not, we suse isSelected() method that returns true/false
+
+
+| JComboBOx | JList |
+|----|----|
+| it is udes to create a drop down list | it is sued to create a list box |
+| only one item can be selected | multiple items can be selected |
+| scrollbar is added automatically | scrollbar is added manually |
+|  setMaximumRowCount(int) is used to specify the no. of items at a time  | setVisibleRowCount(int) is used to specify the no of items at a time  |
+| both ActionEvent and ItemEvent occur when an item is selected | ListSelection Event occurs when an item is selected |
+| getSelectedItem() , getSelectedIndex() returns selected items/ index | getSelectedValue(), getSelectedValueList(), getSelectedIndices() returns selected value/list/index |
+
+
+
+
+
+
+
+
