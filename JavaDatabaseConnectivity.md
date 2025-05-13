@@ -30,6 +30,13 @@ create table student(
 ```
 
 ```
+// updating
+String sql = "update student set faculty='BIM" where ID = 101";
+// deleting
+String sql = "delete from student where id=102";
+```
+
+```
 import java.sql.*;
 
 public class InsertClass{
