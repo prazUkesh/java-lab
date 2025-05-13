@@ -28,3 +28,27 @@ create table student(
 );
 
 ```
+
+```
+import java.sql.*;
+
+public class InsertClass{
+    public static void main(String[] args) {
+        String url="url goes here";
+        String username = "";
+        String password = "";
+
+        try{
+            Class.forName("com.mysql, jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, username,password);
+            String sql="insert into student(id,name,faculty) value(102,'hari','BCA')";
+            Statement st = con.createStatement();
+            st.execute(sql);
+            con.close();
+
+        } catch (Exception ex){
+            System.out.println(ex);
+        }
+    }
+}
+```
