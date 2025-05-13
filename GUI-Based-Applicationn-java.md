@@ -569,8 +569,35 @@ In order to know whether a radio button or checkbox is sleected or not, we suse 
 JFrame
 used to create a frame/window that contains title bar and 3 control buttons (close, maximmize and minimize). It is the main component because all other components are added inside it. The default layout of JFrame is BorderLayout
 
+## Dialogue box
+- a dialogue box is a pop up window thath contains only close(x) butti
+- it may be used to print (alert) messages, input from user, do confirmation and so on
 
+## Types
+- Built-in:
+> these are already available in java
+> for eg.
+ - Message dialogue:
+```
+ JOptionPane.showMessageDialogue(null, "Message to show");
+   ```
+ - Input Dialogue: 
+```
+ String str = JOptionPane.showInputDialogue(null, "Enter a word");
+```
+ - Confirm Dialogue
+```
+int choice = JOptionPane.showConfirmDialogue(null, "Are you sure?");
+```
 
+## Custom User defined
+- theses rae creaed according to requirements
+- JDialog class is used
+- its default layout is BorderLayout
+- Its constructos are:
+  - JDialog (JFrame parent)
+  - JDIalog (JFrame parent, boolean isModal)
+  - JDialog (JFrame parent, String title, boolean isModal)   
 
 
 
