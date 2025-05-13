@@ -597,8 +597,47 @@ int choice = JOptionPane.showConfirmDialogue(null, "Are you sure?");
 - Its constructos are:
   - JDialog (JFrame parent)
   - JDIalog (JFrame parent, boolean isModal)
-  - JDialog (JFrame parent, String title, boolean isModal)   
+  - JDialog (JFrame parent, String title, boolean isModal)
+ 
+    ## Userdefined Dialog box
+
+```
+import java.awt.FlowLayout;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class UserDefinedDialogBox implements  ActionListener{
+    JFrame jf;
+    JButton b1;
+
+    UserDefinedDialogBox(){
+        jf=  new JFrame();
+        jf.setSize(500,500);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setLayout(new FlowLayout());
+
+        b1=new JButton("About us");
+        jf.add(b1);
+        b1.addActionListener(this);
+        jf.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        UserDefinedDialogBox DB = new UserDefinedDialogBox();
+    }
+
+    public void actionPerformed(ActionEvent e){
+        JDialog jd = new JDialog(jf,"geda gudi",true);
+        jd.setSize(300,300);
+        jd.setLayout(new FlowLayout());
+        JLabel L1= new JLabel("Contact us at: abc@xyz.com");
+        jd.add(L1);
+        jd.setVisible(true);
+    }
+}
 
 
+
+```
 
 
