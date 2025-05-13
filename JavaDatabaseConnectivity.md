@@ -16,6 +16,7 @@ st.execute(sql); //throws SQLException
 `` con.close();`` // throws SQLExecution
 
 `` mysql -u root``
+
 creating databasem table and fileds
 ```
 
@@ -51,6 +52,35 @@ public class InsertClass{
             String sql="insert into student(id,name,faculty) value(102,'hari','BCA')";
             Statement st = con.createStatement();
             st.execute(sql);
+            con.close();
+
+        } catch (Exception ex){
+            System.out.println(ex);
+        }
+    }
+}
+```
+### displaying data
+```
+import java.sql.*;
+
+public class DisplayRecord{
+    public static void main(String[] args) {
+        String url="url goes here";
+        String username = "";
+        String password = "";
+
+        try{
+            Class.forName("com.mysql, jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, username,password);
+            String sql="select * from student";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.nect()){
+                System.out.println(rs.getString("id"));
+                System.out.println(rs.getString("name"));
+                System.out.println(rs.getString("faculty"));
+            }
             con.close();
 
         } catch (Exception ex){
