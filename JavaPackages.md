@@ -1,6 +1,6 @@
 # core java packages
 
-- java.lang (all wrapper class except math)
+### java.lang (all wrapper class except math)
   - math
   - byte
   - short
@@ -31,7 +31,7 @@ public class MyApp {
 
 ```
 
-- java.util
+### java.util
   - scanner
   - vector
   - hashtable
@@ -82,8 +82,51 @@ public class MyApp {
 }
 ```
 
-### hashtable
-
+### hashtable & dictionary
 ```
 
+public class MyApp {
+ public static void main(String[] args) {
+
+   Hashtable<Integer, String> ht = new Hashtable<Integer, String>();
+   ht.put(1,"A");
+   ht.put(2,"B");
+   ht.put(3,"C");
+   ht.put(4,"D");
+   ht.put(5,"E");
+   System.out.println(ht);
+
+   Dictionary<Integer, String> dc = new Hashtable<Integer, String>();
+   dc.put(1,"A");
+   dc.put(2,"B");
+   dc.put(3,"C");
+   dc.put(4,"D");
+   dc.put(5,"E");
+   System.out.println(dc);
+}
+}
 ```
+
+### enumeration
+
+```
+ 
+import java.util.*;
+
+
+public class App {
+    public static void main(String[] args)  {
+       Vector v = new Vector();
+       v.add(1);
+       v.add(2);
+       v.add(3);
+       v.add(4);
+       v.add(5);
+      Enumeration v1 = v.elements();
+       while(v1.hasMoreElements()){
+           System.out.println(v1.nextElement());
+       }
+    }
+}
+```
+
