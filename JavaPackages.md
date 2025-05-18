@@ -130,3 +130,19 @@ public class App {
 }
 ```
 
+### Random
+```
+ 
+import java.util.*;
+
+
+public class MyApp {
+    public static void main(String[] args)  {
+     Random rand = new Random();
+     int r1 = rand.nextInt(1000);
+     System.out.println(r1);
+       }
+    }
+
+```
+
