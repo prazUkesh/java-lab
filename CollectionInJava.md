@@ -49,15 +49,15 @@ import java.util.*;
 
 public class MyApp{
   public static void main(String[] args) {
-    Set <String> myList = new HashSet<String>();
-    myList.add("mada");
-    myList.add("ball");
-    myList.add("sugma");
-    myList.add("mada");
-    myList.add("ball");
-    myList.add("sugma");
+    Set <String> mySet = new HashSet<String>();
+    mySet.add("mada");
+    mySet.add("ball");
+    mySet.add("sugma");
+    mySet.add("mada");
+    mySet.add("ball");
+    mySet.add("sugma");
 
-    Iterator<String> itr = myList.iterator();
+    Iterator<String> itr = mySet.iterator();
     while(itr.hasNext()){
       System.out.println(itr.next());
     }
@@ -65,5 +65,5 @@ public class MyApp{
   }
 }
 ```
-
+## Applet
 
